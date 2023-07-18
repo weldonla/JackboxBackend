@@ -2,7 +2,7 @@
 This project was generated with Go cli.
 
 ## MySQL Server
-Make sure you've installed mysql server and docker on your machine and have set up a username and password. Open the databases/user.go file and replace username 'root' and password 'password' with your local mysql credentials.
+Make sure you've installed mysql server and docker on your machine and have set up a username and password for mysql. Open the databases/user.go file and replace username 'root' and password 'password' with your local mysql credentials.
 Run `docker build -t mysql_db:mysql_db .` to build the docker image with the mysql instance
 Then Run `docker run -p 4400:3306 mysql_db` to run the image created previously
 
