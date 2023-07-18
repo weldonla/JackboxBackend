@@ -12,6 +12,7 @@ import (
 	"golang.org/x/crypto/bcrypt"
 )
 
+// @todo we should separate what is auth and what is user crud routes into separate controllers
 func Login(c *fiber.Ctx) error {
 	var data map[string]string
 
@@ -145,7 +146,12 @@ func Register(c *fiber.Ctx) error {
 	})
 }
 
+// @todo We should turn this into more of a crud pattern since we'll probably want to implement the rest of the crud routes at some point.
+// @todo implement paging/searching/filtering
 func GetUserList(c *fiber.Ctx) error {
+	// @todo, this should protect against non-admins rather than relying on the front end for security
+	// this should be using token context to know who is admin and who isn't. Would that be here or in the router? Investigate.
+
 	// var data map[string]string
 
 	// if err := c.BodyParser(&data); err != nil {
