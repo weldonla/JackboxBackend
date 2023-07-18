@@ -1,4 +1,4 @@
-# JackboxBackend
+# Jackbox Backend
 This project was generated with Go cli.
 
 ## MySQL Server
